@@ -48,6 +48,15 @@
 | 21 | duration_ms_scaled | float64   | THe duration of each song mapped to a value from 0 to 1.                       |
 | 22 | loudness_scaled    | float64   | The loudness score of each song, mapped to a value from 0 to 1.                |
 
+## Hypothesis Testing
+
+### Continuous Variables
+
+ - We run hypothesis testing for correlation on our of our continuous features and find that all continuous features except `valence` are signficantly correlated with popularity. 
+ 
+### Categorical Features
+
+ - We find a difference in mean for different groups of all of our continuous features.
 
 
 ## Executive Summary 
