@@ -117,17 +117,20 @@
 
  - Run the functions from the `prepare.py` module. 
  
- - Create a new columns `year_of_release`. 
+ - Create a new columns `year_of_release`.
+ 
 
 ### Data Exploration and Analysis
+
+ - Create multivariate visualizations. 
+ 
+ - Visualize all variables with `popularity`. 
 
  - Use Recursive Feature Elimination and Select K Best to determine which features are most predictive of `popularity`. 
  
  - Run statistical tests on all categorical and continuous features to determine relationship with `popularity`. 
  
- - Visualize all variables with `popularity`. 
- 
- - Create multivariate visualizations. 
+
  
 ### Modeling 
 
