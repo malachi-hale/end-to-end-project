@@ -56,21 +56,21 @@
  
 ### Categorical Features
 
- - We find a difference in mean for different groups of all of our continuous features.
+ - We find a difference in mean for different groups of all of our categorical features.
 
 
 ## Executive Summary 
  - With the goal of determining the features most predictive of `popularity`, we used Select K Best, Recursive Feature Elimination, and hypothesis testing to determine that the most predictive features of `popularity` are:
- - `duration_ms_scaled`, 
- - `explicit`, 
- - `energy`, 
- - `danceability`, 
- - `acousticness`, 
- - `instrumentalness`,
- - `tempo`,
- - `loudness_scaled`, 
- - `year_of_release`, and 
- - `liveness`.
+     - `duration_ms_scaled`, 
+     - `explicit`, 
+     - `energy`, 
+     - `danceability`, 
+     - `acousticness`, 
+     - `instrumentalness`,
+     - `tempo`,
+     - `loudness_scaled`, 
+     - `year_of_release`, and 
+     - `liveness`.
  
  - I used the above features to predict `popularity` using the following methods:
      - Linear Regression, 
@@ -78,7 +78,9 @@
      - TweedieRegressor, 
      - Polynomial Linear Regression. 
  
- - Based on the RMSE value, I concluded that Linear Regression fourth degree was the best model. I ran this model on the test dataset. 
+ - Based on the RMSE and R squared value, I concluded that Linear Regression Fourth Degree was the best model. I ran this model on the test dataset. 
+ 
+ - On the baseline, the selected model performed better than baseline at the predicting the tracks' popularity.
  
 ## Pipeline Stages Breakdown
 
@@ -86,7 +88,7 @@
 
  - Create a `READ.me` file with an outline of a plan for the project.
  
- - Brainstorm ideas and form hypotheses related to how variabels relate to each other. 
+ - Brainstorm ideas and form hypotheses related to how variables relate to each other. 
  
 ### Data Acquisition 
 
