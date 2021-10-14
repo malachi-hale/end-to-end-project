@@ -90,7 +90,7 @@ def add_scaled_columns(train, validate, test):
     Scales columns using min-max scaler. We scale loudness and duration
     because those columns are not on the 0-1 scale.
     '''
-    columns_to_scale = ['duration_ms', 'loudness']
+    columns_to_scale = ['duration_ms', 'loudness', 'tempo']
     # new column names
     new_column_names = [c + '_scaled' for c in columns_to_scale]
     
