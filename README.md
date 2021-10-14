@@ -54,9 +54,45 @@
 
  - We run hypothesis testing for correlation on our of our continuous features and find that all continuous features except `valence` are signficantly correlated with popularity. 
  
+ - The continuous features most strongly correlated with `popularity` are:
+     - `danceability` 
+     - `energy`
+     - `acousticness`
+     - `duration_ms_scaled`
+     - `loundess_scaled`, and
+     - `year_of_release`.
+ 
+ - The following features were also correlated with `popularity`, with the most strongly correlated first:
+     - `instrumentalness`,
+     - `tempo_scaled`,
+     - `liveness`, and 
+     - `speechiness`.
+ 
 ### Categorical Features
 
  - We find a difference in mean for different groups of all of our categorical features.
+ 
+ -  Stastistical testing confirmed that mean popularity differed according to `mode` and `explicit`. 
+ 
+ - Stastistical testing confirmed that mean population popularity differed significantly for the mean popularity for every time signature group. The order of magnitude that these time signature groups (starting with greatest difference from population mean) was:
+     - 3
+     - 4
+     - 1
+     - 5
+     - 0. 
+ 
+ - Stastistical testing confirmed that mean population popularity differed significantly for the mean popularity for every Key group, except Key 4 and Key 9. The order of magnitude that these key groups (starting with greatest difference from population mean) was:
+     - 1 
+     - 6
+     - 11
+     - 5
+     - 3 
+     - 2
+     - 7
+     - 0 
+     - 8 
+     - 10.
+     
 
 
 ## Executive Summary 
@@ -81,6 +117,13 @@
  - Based on the RMSE and R squared value, I concluded that Linear Regression Fourth Degree was the best model. I ran this model on the test dataset. 
  
  - On the baseline, the selected model performed better than baseline at the predicting the tracks' popularity.
+ 
+ - Included in the notebook are also two bonus sections in which we:
+     - use clustering to group the tracks into similar genres. 
+     
+     - Use classfication models Decision Tree and Random Forest Classifier to determine which features are most predictive of a track being a hit. 
+         - We use the Decision Tree Model to find the levels at which key features influence a track's popularity. 
+         - We use Random Forest to run feature importance on each feature of the tracks. 
  
 ## Pipeline Stages Breakdown
 
@@ -139,6 +182,7 @@
  - Document various algorithms and hyperparameters used along with evaluation code and results. 
  
  - Evaluate the model using standard techniques. Compute the evaluation metrics, compare the model to baseline, etcetera. 
+ 
  
 ## Reproduce my Project
 
