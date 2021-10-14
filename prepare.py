@@ -56,6 +56,43 @@ def remove_outliers(df, k, col_list):
 continuous = ['duration_ms', 'danceability', 'energy', 'speechiness', 'acousticness', 'instrumentalness',
        'liveness', 'valence', 'tempo', ]
 
+def make_dummies(df):
+
+    df.time_signature = df.time_signature.replace(regex = {
+                           0: 'Time_Signature_0',
+                           1: 'Time_Signature_1', 
+                           2: 'Time_Signature_2', 
+                           3: 'Time_Signature_3', 
+                           4: 'Time_Signature_4', 
+                           5: 'Time_Signature_5'})
+    
+    df.key = df.key.replace(regex = {
+                           0: 'Key_0',
+                           1: 'Key_1', 
+                           2: 'Key_2', 
+                           3: 'Key_3', 
+                           4: 'Key_4', 
+                           5: 'Key_5', 
+                           6:  'Key_6',
+                           7: 'Key_7',
+                           8: 'Key_8',
+                           9: 'Key_9',
+                           10: 'Key_10',
+                            11: 'Key_11'})
+    
+    ## Now we will substitute the object values for dummy values that are easier to process. 
+    time_signature_dummies = pd.get_dummies(df['time_signature'])
+    
+    key_dummies = pd.get_dummies(df['key'])
+    
+    ##Concatenate our dummy values to our main Dataframe. 
+    df = pd.concat([df, time_signature_dummies, key_dummies], axis=1)
+    
+    ## Drop the redundant columns.
+    df = df.drop(columns = ['key', 'time_signature'])
+    
+    return df
+
 def prepare_data(df):
 
     df = handle_missing_values(df)
